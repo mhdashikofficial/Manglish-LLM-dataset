@@ -1,4 +1,6 @@
 __pycache__/
 *.json
 !unsloth_ready_dataset.json
+!dictionary_training_data.json
+!final_manglish_llama3_dataset.json
 *.txt

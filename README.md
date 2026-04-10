@@ -10,9 +10,10 @@ An incredibly dense, elite-tier **Malayalam and Manglish Conversational Dataset*
 
 This dataset was rigorously extracted and heavily filtered over **9 complete data processing pipelines** to build the absolute cleanest Malayalam/Manglish set available. Starting from large translation models and raw Alpaca parameters, we transformed the content into an exclusively human-like, flowing conversational matrix.
 
-It contains precisely **12,676 flawless dialogue points**.
+It contains precisely **18,676 high-quality dialogue points**.
 
 ### Features
+✔️ **Synthetic Dictionary Anchor**: Includes ~6,000 synthetically generated dictionary-style mappings to ground the model in pure phonetics and translation logic.
 ✔️ **Zero Hallucinations**: Heavily guarded against numeric artifacts and random context-less text generation errors native to LLMs.
 ✔️ **Unsloth & HuggingFace Ready**: Formatted directly to default `messages` → `role` / `content` layouts ensuring instant out-of-the-box training setups.
 ✔️ **Strict Language Isolation**: Scripts never mix intrinsically. Prompts seamlessly traverse between Roman Manglish and standard Malayalam seamlessly but adhere to pure-script representations.
@@ -35,13 +36,17 @@ Example Dataset Structure:
 }
 ```
 
-The master file you need is: **`unsloth_ready_dataset.json`** (~28MB)
+The master file you need is: **`final_manglish_llama3_dataset.json`** (~42MB)
 
 ---
 
 ## 🧬 Repository Layout
 
-- `unsloth_ready_dataset.json` : The finalized elite-quality training dataset.
+- `final_manglish_llama3_dataset.json` : The finalized, merged elite-quality training dataset.
+- `unsloth_ready_dataset.json` : The primary conversational component of the dataset.
+- `dictionary_training_data.json` : The synthetic dictionary component.
+- `generate_dictionary_data.py` : The script used to generate the phonetic dictionary data.
+- `merge_datasets.py` : Script used to combine the conversational and dictionary components.
 - `clean_dataset_*.py` : Original python pipeline scripts used to purge hallucinations, instruction leakages, and phonetic irregularities.
 - `generate_dataset.py` : Base initial layout extractor grabbing sets recursively.
 
