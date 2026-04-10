@@ -19,6 +19,7 @@ It contains precisely **20,000 ultra-high-quality dialogue points**, meticulousl
 ✔️ **Unsloth & HuggingFace Ready**: Formatted directly to default `messages` → `role` / `content` layouts ensuring instant out-of-the-box training setups.
 ✔️ **Strict Language Isolation**: Scripts never mix intrinsically. Prompts seamlessly traverse between Roman Manglish and standard Malayalam seamlessly but adhere to pure-script representations.
 ✔️ **Elite Normalization**: All artificial or hyper-phonetic loan words (`phamgshan`, `dibagg`, `matrrka`) have been carefully smoothed to universally used typing structures (`function`, `debug`, `mathrika`).
+✔️ **Phonetic Grounding**: Enriched with a 1,200-word core vocabulary scraped from real-world conversational patterns to ensure high-fidelity dictionary mappings.
 
 ---
 
@@ -37,7 +38,7 @@ Example Dataset Structure:
 }
 ```
 
-The master file you need is: **`final_manglish_llama3_dataset.json`** (~42MB)
+The master file you need is: **`final_balanced_dataset.json`** (~45MB)
 
 ---
 
